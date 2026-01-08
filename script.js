@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
   const closeBtn = document.getElementById("closeBtn");
@@ -12,27 +12,22 @@
     const img = e.target.closest(".thumb");
     if (!img) return;
 
-    // Find images ONLY inside the same container
     const container = img.parentElement;
     gallery = [...container.querySelectorAll(".thumb")];
     index = gallery.indexOf(img);
 
-    showImage();
+    lightboxImg.src = img.src;
     lightbox.classList.remove("hidden");
   });
 
-  function showImage() {
-    lightboxImg.src = gallery[index].src;
-  }
-
   nextBtn.onclick = () => {
     index = (index + 1) % gallery.length;
-    showImage();
+    lightboxImg.src = gallery[index].src;
   };
 
   prevBtn.onclick = () => {
     index = (index - 1 + gallery.length) % gallery.length;
-    showImage();
+    lightboxImg.src = gallery[index].src;
   };
 
   closeBtn.onclick = () => {
@@ -44,4 +39,4 @@
       lightbox.classList.add("hidden");
     }
   };
-
+});

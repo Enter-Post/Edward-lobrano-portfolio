@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact | Edward Lobrano</title>
+  <title>PRODUCTS | Edward Lobrano</title>
+  <link rel="icon" type="image/png" href="pics/edword.jpg"/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js"></script>
+   <style>
+    .thumb {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
 
@@ -35,7 +45,7 @@
      <li class="relative group">
 
   <!-- Trigger -->
-  <p class="hover:opacity-70">
+  <p class="hover:opacity-70 hover:cursor-pointer">
     PORTFOLIO
     <span class="text-xs">▾</span>
   </p>
@@ -52,7 +62,7 @@
     <li><a href="MADISON_AVENUE.html" class="block px-4 py-4 hover:bg-gray-100">Madison Avenue</a></li>
     <li><a href="TENNESSEE_FAMILY.html" class="block px-4 py-4 hover:bg-gray-100">Pied à Terre</a></li>
     <li><a href="PRESERVE.html" class="block px-4 py-4 hover:bg-gray-100">Dye Preserve</a></li>
-    <li><a href="FAMILY_APARTMENT.html" class="block px-4 py-4 hover:bg-gray-100">Family Apartment</a></li>
+    <li><a href="PARK_AVENUE.html" class="block px-4 py-4 hover:bg-gray-100">Family Apartment</a></li>
     <li><a href="RANCH_HOUSE.html" class="block px-4 py-4 hover:bg-gray-100">Ranch House</a></li>
     <li><a href="GENTLEMANS_APARTMENT.html" class="block px-4 py-4 hover:bg-gray-100">Gentleman's Apartment</a></li>
     <li><a href="SOUTH_CAROLINA.html" class="block px-4 py-4 hover:bg-gray-100">Low Lands</a></li>
@@ -67,17 +77,17 @@
    
 </header>
 
-
-
-  <!-- Banner -->
-  <section class="h-screen bg-cover bg-center"
-    style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4');">
-    <div class="h-full w-full bg-black/30 flex items-center justify-center">
-      <h1 class="text-white text-4xl md:text-6xl tracking-widest">
-        PRODUCTS
-      </h1>
-    </div>
-  </section>
+ <!-- Banner -->
+<section
+  style="
+    background-image: url('pics/Product/image-asset-868.jpeg');
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  "
+>
+</section>
 
   <!-- product 1  -->
 
@@ -106,17 +116,17 @@
 
       <div class="mt-4">
         <a href="#" class="inline-block hover:opacity-80 transition-opacity">
-          <img src="pdf-icon.png" alt="View PDF" class="w-10" >
+          <img src="pics/Product/image-asset-306.png" alt="View PDF" class="w-10" >
         </a>
       </div>
     </div>
 
     <div class="flex-1">
       <img 
-        src="table-image.jpg" 
+        src="pics/Product/image-asset-868.jpeg" 
         alt="Lobrano End Table" 
         class="w-full object-contain"
-        style="border: 1px solid gray; height: 400px;"
+        style=" height: 400px;"
       >
     </div>
   </div>
@@ -170,6 +180,23 @@
 </div>
 
 <div style="height: 200px;"></div>
+
+
+
+
+<div id="lightbox"
+  class="fixed inset-0 bg-black bg-opacity-90 hidden z-[9999] flex items-center justify-center">
+
+  <button id="closeBtn" class="absolute top-6 right-8 text-white text-3xl">✕</button>
+  <button id="prevBtn" class="absolute left-6 text-white text-4xl">‹</button>
+
+  <img id="lightboxImg"
+       class="max-w-[90%] max-h-[90%] object-contain">
+
+  <button id="nextBtn" class="absolute right-6 text-white text-4xl">›</button>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact | Edward Lobrano</title>
+  <title>Gentleman's Apartment | Edward Lobrano</title>
+  <link rel="icon" type="image/png" href="pics/edword.jpg"/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js"></script>
+   <style>
+    .thumb {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
 
@@ -35,7 +45,7 @@
      <li class="relative group">
 
   <!-- Trigger -->
-  <p class="hover:opacity-70">
+  <p class="hover:opacity-70 hover:cursor-pointer">
     PORTFOLIO
     <span class="text-xs">▾</span>
   </p>
@@ -52,7 +62,7 @@
     <li><a href="MADISON_AVENUE.html" class="block px-4 py-4 hover:bg-gray-100">Madison Avenue</a></li>
     <li><a href="TENNESSEE_FAMILY.html" class="block px-4 py-4 hover:bg-gray-100">Pied à Terre</a></li>
     <li><a href="PRESERVE.html" class="block px-4 py-4 hover:bg-gray-100">Dye Preserve</a></li>
-    <li><a href="FAMILY_APARTMENT.html" class="block px-4 py-4 hover:bg-gray-100">Family Apartment</a></li>
+    <li><a href="PARK_AVENUE.html" class="block px-4 py-4 hover:bg-gray-100">Family Apartment</a></li>
     <li><a href="RANCH_HOUSE.html" class="block px-4 py-4 hover:bg-gray-100">Ranch House</a></li>
     <li><a href="GENTLEMANS_APARTMENT.html" class="block px-4 py-4 hover:bg-gray-100">Gentleman's Apartment</a></li>
     <li><a href="SOUTH_CAROLINA.html" class="block px-4 py-4 hover:bg-gray-100">Low Lands</a></li>
@@ -67,17 +77,17 @@
    
 </header>
 
-
-
-  <!-- Banner -->
-  <section class="h-screen bg-cover bg-center"
-    style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4');">
-    <div class="h-full w-full bg-black/30 flex items-center justify-center">
-      <h1 class="text-white text-4xl md:text-6xl tracking-widest">
-        GENTLEMAN'S APARTMENT ON PARK AVENUE
-      </h1>
-    </div>
-  </section>
+ <!-- Banner -->
+<section
+  style="
+    background-image: url('pics/gentleman.jpg');
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  "
+>
+</section>
 
   <!-- Contact Content -->
 
@@ -93,23 +103,38 @@ This apartment at 1185 Park Ave was done for a divorced father of two college ag
 When I first saw this apartment I thought he was living like a college student.  He was very busy and just didn’t have time to focus on how he was living.  We had a budget that we had to adhere to and did.  The dining table and Windsor chairs were his and we had them polished up and used in the dining area.  Though they were more casual and country than the English antiques we purchased and used in other areas of the house they looked great.  The bed in the master he had just purchased and I didn’t have the heart to tell him to let it go so we used this Shaker style bed which actually looked great in this traditional but not spare bedroom.  The beautiful Welsh Dresser in entry we found at Daniel Stein Antiques in San Francisco. </p>
     </div>
 
-    <div class="w-full lg:w-1/2 grid grid-cols-5 gap-2">
-      <img src="thumb1.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb2.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb3.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb4.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb5.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb6.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb7.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb8.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb9.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb10.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb11.jpg" class="aspect-square w-full object-cover bg-gray-100">
-      <img src="thumb12.jpg" class="aspect-square w-full object-cover bg-gray-100">
+   <div class="w-full lg:w-1/2 grid grid-cols-5 gap-2">
+      <img src="pics/Gentleman's_Apartment/cotton+001.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+      <img src="pics/Gentleman's_Apartment/cotton+002.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+      <img src="pics/Gentleman's_Apartment/cotton+003.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+      <img src="pics/Gentleman's_Apartment/cotton+004.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+      <img src="pics/Gentleman's_Apartment/cotton+005.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+      <img src="pics/Gentleman's_Apartment/cotton+006.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+      <img src="pics/Gentleman's_Apartment/cotton+007.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+      <img src="pics/Gentleman's_Apartment/cotton+008.jpg" class="thumb aspect-square w-full object-cover bg-gray-100">
+    
     </div>
   </div>
 
 </div>
 
+
+
+
+
+<div id="lightbox"
+  class="fixed inset-0 bg-black bg-opacity-90 hidden z-[9999] flex items-center justify-center">
+
+  <button id="closeBtn" class="absolute top-6 right-8 text-white text-3xl">✕</button>
+  <button id="prevBtn" class="absolute left-6 text-white text-4xl">‹</button>
+
+  <img id="lightboxImg"
+       class="max-w-[90%] max-h-[90%] object-contain">
+
+  <button id="nextBtn" class="absolute right-6 text-white text-4xl">›</button>
+</div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
