@@ -4,64 +4,66 @@
   <meta charset="UTF-8" />
   <title>Contact | Edward Lobrano</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
 </head>
 <body class="bg-white text-gray-800">
 
-      <!-- Navbar -->
-<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background-color: white; color: black; ">
-  <nav class="max-w-7xl mx-auto px-3 py-3 flex items-center justify-between">
+ <header
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-[9999] transition-all duration-300 overflow-visible"
+  style="background-color: white; color: black;"
+>
+  <nav class="max-w-7xl mx-auto px-3 py-3 flex items-center justify-between overflow-visible">
 
     <!-- Logo -->
-    <a href="index.html" class="text-black tracking-widest text-sm md:text-base" style="font-size: 18px; font-family: Source Sans pro;">
+    <a
+      href="index.html"
+      class="text-black tracking-widest text-sm md:text-base"
+      style="font-size:18px; font-family:'Source Sans Pro', sans-serif;"
+    >
       E D W A R D &nbsp;&nbsp; L O B R A N O
     </a>
+
     <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-10 text-black tracking-widest text-sm" style="font-size: 10px;">
-        <li><a href="about.html" class="hover:opacity-70">About</a></li>
-      <li><a href="#" class="hover:opacity-70">Philosophy</a></li>
-      <li class="relative group">
-  <a href="#" class="hover:opacity-70 flex items-center gap-1">
+    <ul class="hidden md:flex space-x-10 text-black tracking-widest text-sm" style="font-size:10px;">
+
+      <li><a href="about.html" class=" nav-link hover:opacity-70">ABOUT</a></li>
+      <li><a href="philosophy.html" class=" nav-link hover:opacity-70">PHILOSOPHY</a></li>
+
+      <!-- Portfolio Dropdown -->
+     <li class="relative group">
+
+  <!-- Trigger -->
+  <a href="#" class="hover:opacity-70">
     PORTFOLIO
     <span class="text-xs">▾</span>
   </a>
 
   <!-- Dropdown -->
   <ul
-    class="absolute left-0 mt-4 w-64 bg-white text-black shadow-lg opacity-0 invisible
-           group-hover:opacity-100 group-hover:visible transition duration-300
-           tracking-widest text-xs py-6">
+    class="absolute left-0 top-full bg-white text-center text-black shadow-xl
+           opacity-0 invisible group-hover:opacity-100 group-hover:visible
+           transition duration-200 tracking-widest text-xs z-[9999]" style="margin-left: -50px; width: 12rem; font-size: 10px;">
 
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">5th Avenue Apartment</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">The Bahamas</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Dancing Hares</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Madison Avenue</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Pied à Terre</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Dye Preserve</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Family Apartment</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Ranch House</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Gentleman's Apartment</a></li>
-    <li><a href="#" class="block px-6 py-2 hover:bg-gray-100">Low Lands</a></li>
+    <li><a href="5th_avenue_apartment.html" class="block px-4 py-4 hover:bg-gray-100">5th Avenue Apartment</a></li>
+    <li><a href="the_bahamas.html" class="block px-4 py-4 hover:bg-gray-100">The Bahamas</a></li>
+    <li><a href="dancing_hares.html" class="block px-4 py-4 hover:bg-gray-100">Dancing Hares</a></li>
+    <li><a href="madison_avenue.html" class="block px-4 py-4 hover:bg-gray-100">Madison Avenue</a></li>
+    <li><a href="pied_a_terre.html" class="block px-4 py-4 hover:bg-gray-100">Pied à Terre</a></li>
+    <li><a href="dye_preserve.html" class="block px-4 py-4 hover:bg-gray-100">Dye Preserve</a></li>
+    <li><a href="family_apartment.html" class="block px-4 py-4 hover:bg-gray-100">Family Apartment</a></li>
+    <li><a href="ranch_house.html" class="block px-4 py-4 hover:bg-gray-100">Ranch House</a></li>
+    <li><a href="gentlemans_apartment.html" class="block px-4 py-4 hover:bg-gray-100">Gentleman's Apartment</a></li>
+    <li><a href="low_lands.html" class="block px-4 py-4 hover:bg-gray-100">Low Lands</a></li>
 
   </ul>
 </li>
-       <li><a href="#" class="hover:opacity-70">Showcase</a></li>
-      <li><a href="#" class="hover:opacity-70">Product</a></li>
-      <li><a href="contact.html" class="hover:opacity-70">Contact</a></li>
+
+      <li><a href="#" class="nav-link hover:opacity-70">SHOWCASE</a></li>
+      <li><a href="#" class="nav-link hover:opacity-70">PRODUCT</a></li>
+      <li><a href="contact.html" class="nav-link hover:opacity-70">CONTACT</a></li>
     </ul>
-
-    <!-- Mobile Button -->
-    <button id="menuBtn" class="md:hidden text-white focus:outline-none">
-      ☰
-    </button>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu"
-    class="hidden bg-white text-black text-center py-10 space-y-6 tracking-widest">
-    <a href="index.html" class="block">HOME</a>
-    <a href="about.html" class="block">ABOUT</a>
-    <a href="contact.html" class="block">CONTACT</a>
-  </div>
+   
 </header>
 
 
