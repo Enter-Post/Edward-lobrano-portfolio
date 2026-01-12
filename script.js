@@ -5,38 +5,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.getElementById("nextBtn");
   const prevBtn = document.getElementById("prevBtn");
 
-  let gallery = [];
+  const gallery = Array.from(document.querySelectorAll(".thumb"));
   let index = 0;
 
+  // Open lightbox
   document.addEventListener("click", e => {
     const img = e.target.closest(".thumb");
     if (!img) return;
 
-    const container = img.parentElement;
-    gallery = [...container.querySelectorAll(".thumb")];
     index = gallery.indexOf(img);
+    if (index === -1) return;
 
     lightboxImg.src = img.src;
     lightbox.classList.remove("hidden");
   });
 
-  nextBtn.onclick = () => {
+  // Next
+  nextBtn.addEventListener("click", e => {
+    e.stopPropagation();
     index = (index + 1) % gallery.length;
     lightboxImg.src = gallery[index].src;
-  };
+  });
 
-  prevBtn.onclick = () => {
+  // Prev
+  prevBtn.addEventListener("click", e => {
+    e.stopPropagation();
     index = (index - 1 + gallery.length) % gallery.length;
     lightboxImg.src = gallery[index].src;
-  };
+  });
 
-  closeBtn.onclick = () => {
+  // Close button
+  closeBtn.addEventListener("click", e => {
+    e.stopPropagation();
     lightbox.classList.add("hidden");
-  };
+  });
 
-  lightbox.onclick = e => {
+  // Click outside image closes
+  lightbox.addEventListener("click", e => {
     if (e.target === lightbox) {
       lightbox.classList.add("hidden");
     }
-  };
+  });
 });
